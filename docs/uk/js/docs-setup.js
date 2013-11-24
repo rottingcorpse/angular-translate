@@ -142,7 +142,7 @@ NG_DOCS={
       "id": "03_using-translate-service",
       "shortName": "Сервіс $translate",
       "type": "overview",
-      "keywords": "$scope $translate $translateprovider add an and angular angular-translate app awesome by com comes config controller ctrl expose features function guide headline html it json love module myapp namespace namespaced_paragraph ng-app ng-controller overview paragraph pascalprecht service srsly table translate translation translations unicorn var via what with"
+      "keywords": "$on $scope $translate $translatechangesucces $translatechangesuccess $translateprovider add an and angular angular-translate app awesome by com comes config controller ctrl expose features function guide headline html it json love module myapp namespace namespaced_paragraph ng-app ng-controller overview paragraph pascalprecht service srsly table translate translation translations unicorn var via what with"
     },
     {
       "section": "guide",
