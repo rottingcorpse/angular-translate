@@ -46,7 +46,38 @@ app.controller('Ctrl', ['$scope', '$translate', function ($scope, $translate) {
 <strong>Note:</strong> Namespaced translations are accessed as JSON properties, see 'NAMESPACE.PARAGRAPH'`.</p>
 
 <p>That's all. Now when you think about translating the contents of a <code>&lt;title&gt;</code> you
-can do so within your controller. Here's a working sample:</p>
+can do so within your controller.</p>
+
+<h2 id="thingstokeepinmind">Things to keep in mind</h3>
+
+<p>Please keep in mind that the usage of the <code>$translate</code> service doesn't provide a two-way
+data binding default! When using <code>$translate</code> service it works synchronously, which means
+it returns the translation for the given translation id, if it exists. If it doesn't
+exist it'll probably just return the translation id.</p>
+
+<p>Now, for the case you're using an asynchronous loader, you might be a bit confused why
+the <code>$translate</code> service always returns the given translation id instead of the
+translation you're looking for. This is because the translation id doesn't exist in the
+moment <code>$translate</code> service searches for it because translation tables are loaded
+asynchronously. To get around this, you have to somehow tell <code>$translate</code> service to
+be called, once the translation table, that is requested by asynchronous loader, is
+available.</p>
+
+<p>You can do that by simply wrapping your <code>$translate</code> call into a <code>$translateChangeSucces</code>
+callback, which gets fired every time a translation change was successful. Because an
+asynchronous loader only requests a table when a language change is about to happen.
+Once its loaded, and the translate change happened, the event gets fired. Here's how
+it could look like:</p>
+
+<pre class="prettyprint linenums">
+app.controller('Ctrl', ['$scope', '$translate', function ($scope, $translate) {
+  $scope.$on('$translateChangeSuccess', function () {
+    $scope.headline = $translate('HEADLINE');
+  });
+}]);
+</pre>
+
+<p>Here's a working sample:</p>
 
 <h3>Source</h3>
 <div source-edit="myApp" source-edit-deps="angular.js script.js" source-edit-html="index.html-5" source-edit-css="" source-edit-js="script.js-4" source-edit-unit="" source-edit-scenario=""></div>

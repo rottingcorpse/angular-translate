@@ -42,6 +42,21 @@ asks the loader to that.</p><h4 id="Parameters">Parameters</h4>
 – <p>Returns <strong>true</strong> if the part is available now and <strong>false</strong> if not.</p></div>
 </div>
 </li>
+<li><h3 id="setPart">setPart(lang, part, table)</h3>
+<div class="setpart"><p>Sets a translation table to the specified part. This method does not make the specified part
+available, but only avoids loading this part from the server.</p><h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code ng:non-bindable="">lang – {string} – </code>
+<p>A language of the given translation table</p></li>
+<li><code ng:non-bindable="">part – {string} – </code>
+<p>A name of the target part</p></li>
+<li><code ng:non-bindable="">table – {object} – </code>
+<p>A translation table to set to the specified part</p></li>
+</ul>
+<h4 id="Returns">Returns</h4>
+<div class="returns"><code ng:non-bindable="">{object}</code>
+– <p>$translatePartialLoaderProvider, so this method is chainable</p></div>
+</div>
+</li>
 </ul>
 </div>
 </div>

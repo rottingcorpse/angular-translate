@@ -83,7 +83,7 @@ app.config(function ($routeProvider) {
 нему доступ).</p>
 
 <pre class="prettyprint linenums">
-app.config(function ['$translateProvider', ($translateProvider) {
+app.config(['$translateProvider', function ($translateProvider) {
 
 }]);
 </pre>
@@ -136,7 +136,7 @@ var translations = {
 <p>Мы можем ее добавить при помощи <code>$translateProvider.translations()</code>:</p>
 
 <pre class="prettyprint linenums">
-app.config(function ['$translateProvider', ($translateProvider) {
+app.config(['$translateProvider', function ($translateProvider) {
   // add translation table
   $translateProvider.translations(translations);
 }]);

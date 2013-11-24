@@ -1,0 +1,61 @@
+<h1><code ng:non-bindable=""></code>
+<span class="hint"></span>
+</h1>
+<div><h1 id="">Події</h2>
+
+<p>angular-translate породжує в <code>$rootScope</code> спеціальні події, які ви зможете обробляти як тільки вони
+будуть викликані. В цьому документі описані різноманітні події і коли вони відбуваються.</p>
+
+<h2 id="">Базові події</h3>
+
+<p>Деякі події відбуваються незалежно від того, як ви налаштуєте angular-translate. Ви можете
+розраховувати на те, що вони викликаються завжди.</p>
+
+<h4 id="dtranslatechangestart"><code>$translateChangeStart</code></h5>
+
+<p>Викликається коли angular-translate починає спробу зміни мови. Це відбувається при запуску, коли
+мова встановлюється вперше, або при зміні мови під час виконання з допомогою <code>$translate.uses()</code>.
+Ця подія викликається також якщо angular-translate необхідно спочатку завантажити дані асинхронно.</p>
+
+<h4 id="dtranslatechangesuccess"><code>$translateChangeSuccess</code></h5>
+
+<p>Як сказано в назві події, вона викликається як тільки зміна мови відбулася успішно. Ця подія
+викликається після того, як асинхронний завантажувач завантажив дані перекладу. Якщо завантажувач не
+використовується, вона зазвичай викликається одразу після події <code>$translateChangeStart</code>.</p>
+
+<h4 id="dtranslatechangeerror"><code>$translateChangeError</code></h5>
+
+<p>Викликається коли зміна мови завершилася невдачею. Таке можливо коли асинхронний завантажувач
+відхиляє (rejects) дану обіцянку (promise).</p>
+
+<h4 id="dtranslatechangeend"><code>$translateChangeEnd</code></h5>
+
+<p>Викликається завжди при завершенні зміни мови, не важливо успішна вона чи ні, після того, як всі
+зареєстровані сервіси інтерполяції були сповіщені про зміну мови.</p>
+
+<h2 id="">Події асинхронного завантаження</h3>
+
+<p>Тут наведені події, що породжуються тільки при використанні асинхронного завантажувача.</p>
+
+<h4 id="dtranslateloadingstart"><code>$translateLoadingStart</code></h5>
+
+<p>Як говориться в назві події, вона породжується коли викликається асинхронний завантажувач, як раз
+після події <code>$translateChangeStart</code>.</p>
+
+<h4 id="dtranslateloadingsuccess"><code>$translateLoadingSuccess</code></h5>
+
+<p>Викликається коли асинхронний завантажувач повертає вирішену обіцянку (resolved promise).</p>
+
+<h4 id="dtranslateloadingerror"><code>$translateLoadingError</code></h5>
+
+<p>Викликається коли асинхронний завантажувач повертає відхилену обіцянку (rejected promise).</p>
+
+<h4 id="dtranslateloadingend"><code>$translateLoadingEnd</code></h5>
+
+<p>Викликається коли асинхронний завантажувач повернув вирішену або відхилену обіцянку. У випадку, якщо
+завантажувач повернув обіцянку, подія породжується після оновлення таблиці перекладів.</p>
+
+<h4 id="dtranslatepartialloaderstructurechanged"><code>$translatePartialLoaderStructureChanged</code></h5>
+
+<p>Викликається при зміні "структури" <code>$translatePartialLoader</code> при використанні будь-якого з <code>*Part()</code>
+методів.</p></div>
