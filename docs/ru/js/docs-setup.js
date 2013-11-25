@@ -135,7 +135,7 @@ NG_DOCS={
       "id": "02_getting-started",
       "shortName": "Начало работы",
       "type": "overview",
-      "keywords": "$location $locationprovider $route $routeprovider $translate $translateprovider add an and angular angular-translate app awesome by change charset com comes concrete config controller features for function guide headline here html html5 html5mode i18n is it javascript js json language ll love module myapp namespace namespaced ng-app now overview paragraph pascalprecht path see somefancyctrl specific src srsly sub_namespace table templateurl this to translate translation translation_id translation_id1 translations unicorn url utf-8 var we what when with yet"
+      "keywords": "$location $locationprovider $route $routeprovider $translate $translateprovider add an and angular angular-translate another_namespace app awesome bar by change charset com comes concrete config controller features foo for function guide headline here html html5 html5mode i18n is it javascript js json language ll love module my myapp namespace namespaced ng-app now ok ok_text overview paragraph pascalprecht path see some_namespace somefancyctrl specific src srsly sub_namespace table templateurl text this to translate translation translation_id translation_id1 translations unicorn url utf-8 var we what when with yet"
     },
     {
       "section": "guide",
